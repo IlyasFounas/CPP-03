@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = ScavTrap
 
 INCLUDES = includes
 SRC =   ClapTrap.cpp \
