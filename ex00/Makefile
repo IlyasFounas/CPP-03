@@ -1,8 +1,8 @@
 NAME = inheritance
 
 INCLUDES = includes
-SRC =   srcs/ClapTrap.cpp \
-		srcs/main.cpp
+SRC =   ClapTrap.cpp \
+		main.cpp
 
 CXX = c++
 
