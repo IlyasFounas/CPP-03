@@ -21,6 +21,11 @@ ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
     std::cout << "ScavTrap copy constructor called for " << this->Name << std::endl;
 }
 
+ScavTrap::~ScavTrap()
+{
+	std::cout << "ScavTrap destroyed on " << this->Name << std::endl;
+}
+
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
 	if (this != &other)

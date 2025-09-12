@@ -2,6 +2,7 @@ NAME = ScavTrap
 
 INCLUDES = includes
 SRC =   ClapTrap.cpp \
+		ScavTrap.cpp \
 		main.cpp
 
 CXX = c++
