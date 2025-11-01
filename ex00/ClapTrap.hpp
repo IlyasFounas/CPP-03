@@ -12,12 +12,14 @@ class ClapTrap
     ClapTrap(const ClapTrap &other);
     ~ClapTrap();
     ClapTrap &operator=(const ClapTrap &other);
+
+    // members functions
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
   private:
-    std::string Name;
+    std::string _name;
     int _hit;
     int _energyPoints;
     int _attackDamage;
