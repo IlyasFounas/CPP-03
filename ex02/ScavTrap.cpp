@@ -2,10 +2,10 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-    this->_hit = 100;
+	this->_hit = 100;
     this->_energyPoints = 50;
     this->_attackDamage = 20;
-    std::cout << "ScavTrap constructor called for " << this->Name << std::endl;
+    std::cout << "ScavTrap constructor called for " << this->_name << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
@@ -13,24 +13,24 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
     this->_hit = 100;
     this->_energyPoints = 50;
     this->_attackDamage = 20;
-    std::cout << "ScavTrap constructor called for " << this->Name << std::endl;
+    std::cout << "ScavTrap constructor called for " << this->_name << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-    std::cout << "ScavTrap copy constructor called for " << this->Name << std::endl;
+    std::cout << "ScavTrap copy constructor called for " << this->_name << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap destroyed on " << this->Name << std::endl;
+	std::cout << "ScavTrap destroyed on " << this->_name << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
 	if (this != &other)
 	{
-		this->Name = other.Name;
+		this->_name = other._name;
 		this->_hit = other._hit;
 		this->_attackDamage = other._attackDamage;
 		this->_energyPoints = other._energyPoints;
@@ -40,21 +40,20 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
 void ScavTrap::attack(const std::string &target) 
 {
-    if (this->_energyPoints < 0)
+    if (this->_energyPoints <= 0)
+		std::cout << this->_name << " havn't energy points" << std::endl;
+	else if (this->_hit <= 0)
+		std::cout << this->_name << " is dead" << std::endl;
+	else
 	{
-		std::cout << this->Name << " havn't energy points" << std::endl;
-		return ;
+		this->_energyPoints--;
+		std::cout << this->_name << " ferociously attacks " << target ;
+		std::cout << " dealing " << this->_attackDamage << " points of damage!" << std::endl;
 	}
-	if (this->_hit < 0)
-	{
-		std::cout << this->Name << " is dead" << std::endl;
-		return ;
-	}
-    std::cout << this->Name << " ferociously attacks " << target ;
-    std::cout << " dealing " << this->_attackDamage << " points of damage!" << std::endl;
 }
 
 void ScavTrap::guardGate()
 {
-    std::cout << "ScavTrap " << this->Name << " has entered Gate Keeper mode. No one shall pass!" << std::endl;
+    if (this->_hit > 0)
+    	std::cout << "ScavTrap " << this->_name << " has entered Gate Keeper mode. No one shall pass!" << std::endl;
 }
