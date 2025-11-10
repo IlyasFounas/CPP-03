@@ -41,7 +41,7 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 void FragTrap::attack(const std::string &target) 
 {
     if (this->_energyPoints <= 0)
-		std::cout << this->_name << " havn't energy points" << std::endl;
+		std::cout << this->_name << " havn't enough energy points" << std::endl;
 	else if (this->_hit <= 0)
 		std::cout << this->_name << " is dead" << std::endl;
 	else
