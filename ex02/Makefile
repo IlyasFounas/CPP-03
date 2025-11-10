@@ -1,10 +1,12 @@
 NAME = fragtrap
 
-INCLUDES = includes
-SRC =   ClapTrap.cpp \
-		ScavTrap.cpp \
-		FragTrap.cpp \
-		main.cpp
+INCLUDES = inc
+SRCS = srcs/
+CLASS = $(SRCS)class/
+SRC =   $(CLASS)ClapTrap.cpp \
+	    $(CLASS)FragTrap.cpp \
+		$(CLASS)ScavTrap.cpp \
+		$(SRCS)main.cpp
 
 CXX = c++
 

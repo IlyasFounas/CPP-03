@@ -1,8 +1,8 @@
 NAME = ClapTrap
 
-INCLUDES = includes
-SRC =   ClapTrap.cpp \
-		main.cpp
+INCLUDES = inc
+SRC =   srcs/class/ClapTrap.cpp \
+		srcs/main.cpp
 
 CXX = c++
 
