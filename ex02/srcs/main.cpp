@@ -6,6 +6,7 @@ int main(void)
     FragTrap dest("destroyer");
     ScavTrap term("terminator");
 
+    std::cout << std::endl << "DEST AND TERM TESTS :" << std::endl;
     for (int i = 0; i < 4; i++)
     {
         dest.attack("term");
@@ -13,6 +14,7 @@ int main(void)
         term.attack("dest");
         dest.takeDamage(20);
     }
+    std::cout << std::endl << "END TESTS :" << std::endl;
     dest.highFivesGuys();
     term.guardGate();
     return (0);
