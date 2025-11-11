@@ -2,19 +2,36 @@
 
 int main(void)
 {
-    DiamondTrap dest("destroyer");
-    DiamondTrap term("terminator");
+    DiamondTrap faker("faker");
+    DiamondTrap bdd("bdd");
 
-    std::cout << std::endl << "DEST AND TERM TESTS :" << std::endl;
-    for (int i = 0; i < 4; i++)
-    {
-        dest.attack("term");
-        term.takeDamage(30);
-        term.attack("dest");
-        dest.takeDamage(20);
-    }
-    std::cout << std::endl << "END TESTS :" << std::endl;
-    dest.highFivesGuys();
-    term.guardGate();
+    std::cout << std::endl << "____________________________________"
+    << std::endl << std::endl << "FAKER, the B.M.O.A.T (better midlaner of all time)"
+    << std::endl << std::endl << "VS" << std::endl << std::endl << "bdd"
+    << std::endl << "____________________________________" << std::endl << std::endl;
+
+    faker.guardGate();
+    std::cout << std::endl;
+
+    faker.attack("bdd");
+    bdd.takeDamage(30);
+
+    std::cout << std::endl;
+    faker.attack("bdd");
+    bdd.takeDamage(30);
+
+    std::cout << std::endl;
+    faker.attack("bdd");
+    bdd.takeDamage(30);
+
+    std::cout << std::endl;
+    faker.attack("bdd");
+    bdd.takeDamage(30);
+
+    std::cout << std::endl << "SPECIAL ABILITIES :" << std::endl;
+    faker.highFivesGuys();
+    faker.whoAmI();
+    
+    std::cout << std::endl << "DESTRUCTORS :" << std::endl;
     return (0);
 }

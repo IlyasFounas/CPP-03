@@ -14,8 +14,11 @@ int main(void)
         term.attack("dest");
         dest.takeDamage(20);
     }
+    
     std::cout << std::endl << "END TESTS :" << std::endl;
     dest.highFivesGuys();
     term.guardGate();
+
+    std::cout << std::endl << "DESTRUCTORS :" << std::endl;
     return (0);
 }
